@@ -1,0 +1,37 @@
+<div class="book-card">
+            <div class="headline"><h3>Bookname</h3></div>
+            <div class="book-picture"><img src="./src/img/brownBook.png"></div>
+
+            <div class="price-and-like">
+
+                <div class="price">19.99 $</div>
+                <div class="like-button">Herz</div>
+
+            </div>
+            
+
+            <div class="book-info">
+                <div class="autor"><p>Autor:</p><p>test</p></div>
+                <div class="since"><p>Erscheinungsjahr:</p><p>test</p></div>
+                <div class="genre"><p>genre:</p><p>test</p></div>
+            </div>
+
+            <div class="comments-heading"><h4>Kommentare:</h4></div>
+            <div class="comment-section">
+
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                <h4>Kommentare:</h4>
+                
+               
+            </div>
+            <div class="input-section">
+            <input type="text">
+        </div>
+        </div>    
