@@ -55,24 +55,15 @@ function bookTemplate(book){
     </div>
 
     <div class="comments-heading"><h4>Kommentare:</h4></div>
-    <div class="comment-section">
-
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-        <h4>Kommentare:</h4>
-               
+    <div id="comment" class="comment-section">        
     </div>
-    <div class="input-section">
-    <input type="text">
-</div>
+ <div class="input-section">
+    <input id="inputfield" type="text" placeholder="Kommentar eingeben">
+    <button onclick="addComment()">send</button>
 </div>`    
 }
+
+
 
 function renderBooks(){
     let contentRef = document.getElementById("content");
@@ -82,4 +73,21 @@ function renderBooks(){
        contentRef.innerHTML += bookTemplate(books[i]);
         
     }
+}
+
+
+function addComment(){
+
+  let inputRef = document.getElementById("inputfield");  
+  let contentRef = document.getElementById("comment");
+  let noteInput = inputRef.value;
+  contentRef.innerHTML += commentTemplate(noteInput);
+  inputRef.value = "";
+
+
+}
+
+function commentTemplate(noteInput){
+  
+  return `<p>User32: "${noteInput}"</p>`
 }
