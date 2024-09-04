@@ -5,7 +5,9 @@ let books = [
       "autor": "Ernest Hemingway",
       "erscheinungsjahr": 1952,
       "genre": "Klassiker",
-      "like": 234
+      "like": 234,
+      "isLike": false
+
     },
     {
       "buchname": "1984",
@@ -13,7 +15,8 @@ let books = [
       "autor": "George Orwell",
       "erscheinungsjahr": 1949,
       "genre": "Dystopie",
-      "like": 123
+      "like": 123,
+      "isLike": false
     },
     {
       "buchname": "Die unendliche Geschichte",
@@ -21,7 +24,8 @@ let books = [
       "autor": "Michael Ende",
       "erscheinungsjahr": 1979,
       "genre": "Fantasy",
-      "like": 23
+      "like": 23,
+      "isLike": false
     },
     {
       "buchname": "Der Name des Windes",
@@ -29,7 +33,8 @@ let books = [
       "autor": "Patrick Rothfuss",
       "erscheinungsjahr": 2007,
       "genre": "Fantasy",
-      "like": 92
+      "like": 92,
+      "isLike": false
     },
     {
       "buchname": "Die große Reise",
@@ -37,7 +42,8 @@ let books = [
       "autor": "J.K. Rowling",
       "erscheinungsjahr": 2020,
       "genre": "Abenteuer",
-      "like": 21
+      "like": 21,
+      "isLike": false
     }
   ];
   
@@ -50,7 +56,7 @@ function bookTemplate(book, index){
 
     <div class="price-and-like">
         <div class="price">${book.preis}$</div>
-        <div class="like-button"><div onclick="clickHeart()" id="heart-button" class="bg-red"><img class="herz" src="./src/img/hearth.svg"></div><span>${book.like}</span></div>
+        <div class="like-button"><div onclick="clickHeart(${index})" id="heart-button-${index}"><img class="herz" src="./src/img/hearth.svg"></div><span>${book.like}</span></div>
     </div>
     <div class="book-info">
         <div class="autor"><p>Autor:</p><p>${book.autor}</p></div>
@@ -88,6 +94,21 @@ function addComment(index){
   inputRef.value = "";
 }
 
+function clickHeart(index){ 
+  let book = books[index];
+ 
+  book.isLike = !book.isLike
+  if (book.isLike) {
+    book.like += 1;
+  } else { 
+    book.like -=1;
+    }
+
+  renderBooks();
+
+
+}
+ 
 
 function commentTemplate(noteInput){ 
   return `<p>User32: "${noteInput}"</p>`
