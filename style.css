@@ -39,7 +39,7 @@ html {
 
 .book-card {
     width: 37.5rem;
-    height: 65.5rem;
+    height: 69.5rem;
     border: 1px solid black;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -88,6 +88,22 @@ img {
     margin-right: 1em;
     font-size: 2em;
     margin-top: 1em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.herz {
+    height: 2em;
+    width: auto;
+    fill: white;
+}
+
+.herz.clicked {
+    fill: white;
 }
 
 .book-info {
@@ -96,6 +112,8 @@ img {
     margin-top: 2em;
     
 }
+
+
 
 .comment-section {
     font-size: 1.5em;

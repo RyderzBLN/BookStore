@@ -4,7 +4,7 @@
 
     <div class="price-and-like">
         <div class="price">${book.preis}$</div>
-        <div class="like-button">Herz</div>
+        <div class="like-button"><div onclick="clickHeart()" id="heart-button" class="bg-red"><img class="herz" src="./src/img/hearth.svg"></div><span>${book.like}</span></div>
     </div>
     <div class="book-info">
         <div class="autor"><p>Autor:</p><p>${book.autor}</p></div>
@@ -13,9 +13,22 @@
     </div>
 
     <div class="comments-heading"><h4>Kommentare:</h4></div>
-    <div id="show-comment" class="comment-section">        
+    <div id="comment" class="comment-section">        
     </div>
-    <div class="input-section">
+ <div class="input-section">
     <input id="inputfield" type="text" placeholder="Kommentar eingeben">
-</div>
+    <button onclick="addComment()">send</button>
 </div>`    
+
+
+
+// //function clickHeart(book){
+    // if (document.getElementById("heart-button").classList.toggle("bg-red")){
+    //   book.like += 1;
+    // } else {
+    //   book.like -= 1;
+    // }
+    // renderBooks(); }
+   
+   
+   
