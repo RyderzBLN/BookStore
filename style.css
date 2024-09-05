@@ -92,8 +92,8 @@ img {
     flex-direction: column-reverse;
 }
 
-.bg-red {
-    background-color: red;
+.bg-red path {
+    fill: red;
 }
 
 .herz {
